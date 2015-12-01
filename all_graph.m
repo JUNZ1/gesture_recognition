@@ -1,4 +1,9 @@
-%tüm validation ve training grafiklemesi için
+%tï¿½m validation ve training grafiklemesi iï¿½in
+clear
+clc
+load('proto.mat');
+run('ilk_bolum_bp.m');
+figure()
 epoch=0
 k=1;
 durdur=0;
@@ -9,7 +14,7 @@ c(k)=abs(ans);
 run('valid');
 m(k)=abs(ans);
 m(k)
-if m(k)<0.00003 %0.0001
+if m(k)<0.03 %0.0001
 durdur=1
 end
 epoch=epoch+1
